@@ -1,0 +1,275 @@
+
+local SimpleUi = loadstring(game:HttpGet("https://raw.githubusercontent.com/naypramx/Ui__Project/Script/Asss"))()
+local Ui = SimpleUi:Win('Amongus Hub')
+local Chanel = Ui:Channel('All map')
+
+local Page = Chanel:Addpage('Script')
+Page:Button("MeepCity",function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/synolope/MeepCity-Avatar-Cloner/main/loadstring.lua', true))()
+    end)
+Page:Button("ZPU(only Mad CIty)",function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/xZPUHigh/zpuhub/main/zpu_hub_all_map.lua")()
+end)
+Page:Button("Phantom Forces",function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/xZPUHigh/zpuhub/main/phantomforces.lua")()
+end)
+Page:Button("Pet Simulator X",function()
+    loadstring(game:HttpGet"https://www.scriptblox.com/raw/SAZA-HUB_496")()
+end)
+Page:Button("Darkhub arsenal",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bawzazaEz/arsenal/main/darkhub"))()
+end)
+Page:Button("Ninja Legends",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HydraVirgo/ninjalegendsfreegui/main/obfusc", true))()
+end)
+Page:Button("Brookhaven RP",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NocturneMoDz/BROOKHAVEN/main/METAB", true))()
+end)
+Page:Button("Funky Friday",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()   
+end)
+Page:Button("Free Fire(Tp hub)",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/HoverHub/main/FREEFIRE.lua"))()   
+end)
+Page:Button("Free Fire infinite bullet(by androssy)",function()
+    loadstring(game:HttpGet("https://androssy.net/TrashXenon/FunWareX.lua", true))()  
+end)
+Page:Button("Natural Disaster Survival",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Patskorn/Teleport/main/Natural%20Disaster%20Survival.lua"))()
+end)
+Page:Button("LUCKY BLOCKS Battlegrounds",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Patskorn/Teleport/main/LUCKY%20BLOCKS.lua"))()
+end)
+Page:Button("Nok piece",function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/hngamingroblox/209794946c5e8c6ffcd06c82386dfdc0/raw",true))()
+end)
+Page:Button("helicopter",function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+end)
+Page:Button("Mokuro(bloxfruit, KingLegacy, petsim)",function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+end)
+Page:Button("Anime Fighters",function()
+    loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/KiJinGaming/FreeScript/main/KJHub.lua"))();
+end)
+Page:Button("kor blox",function()
+    loadstring(game:HttpGet("https://raw.github.com/accountezNoob/Venomhub/main/SalapakJai",true))();
+end)
+Page:Button("Bedwar (ship right open ui)",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+Page:Button("Size (some map)",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bawzazaEz/size/main/sizeEz"))()
+end)
+Page:Button("Last Pirates, Anime Clash Simulator",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/x2SPETER/x2SPETER/main/"..game.PlaceId..""))()
+end)
+Page:Button("Anime Brawl, Dragon-Orbz",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/x2SPETER/x2SPETER/main/"..game.PlaceId..""))()
+end)
+local Page = Chanel:Addpage('Auto')
+Page:Button("walk_on_wall",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bawzazaEz/walk_on_wall/main/Kuy"))()
+end)
+Page:Button("Teleport Hub",function()
+    loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/KiJinGaming/FreeScript/main/KJHub.lua"))()
+end)
+Page:Button("Console Admin new!",function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/tzTXmYf2'),true))()
+end)
+Page:Button("Fps Boots",function()
+    FPSBoots()
+end)
+Page:Toggle("Sit",false,function(t)
+_G.Sit = t
+    spawn(function()
+        if _G.Sit == true then
+            while _G.Sit do wait()
+            game.Players.LocalPlayer.Character.Humanoid.Sit = true
+            end
+        end
+    end)
+end)
+Page:Toggle("infinitejump",false,function(t)
+_G.jojo = t
+    spawn(function()
+        if _G.jojo then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/bawzazaEz/jump/main/jumpPower"))()
+        end
+    end)
+end)
+Page:Toggle("Ctrl+Click",false,function(t)
+_G.Ctrl = t
+    if _G.Ctrl then
+        local Plr = game:GetService("Players").LocalPlayer
+        local Mouse = Plr:GetMouse()
+        
+        Mouse.Button1Down:connect(function()
+        if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+        if not Mouse.Target then return end
+        Plr.Character:MoveTo(Mouse.Hit.p)
+        end)
+    end
+end)
+Page:Toggle("Fly",false,function(t)
+    Fly = t
+    activatefly()
+end)
+Page:Toggle("noclip",false,function(t)
+_G.NoClip = t
+spawn(function()
+    while game:GetService("RunService").Stepped:wait(10) do
+        character = game.Players.LocalPlayer.Character 
+        if _G.NoClip then
+            pcall(function()
+                for _, v in pairs(character:GetDescendants()) do
+                    pcall(function()
+                        if v:IsA("BasePart") then
+                            pcall(function()
+                            v.CanCollide = false
+                            end)
+                        end
+                    end)
+                end
+            end)
+        end
+    end
+end)
+end)
+Page:slider("Walkspeed",0,1000,1,function(t)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = t
+end)
+Page:slider("JumpPower",0,100,1,function(t)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = t
+end)
+
+function FPSBoots()
+    local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+    local g = game
+    local w = g.Workspace
+    local l = g.Lighting
+    local t = w.Terrain
+    t.WaterWaveSize = 0
+    t.WaterWaveSpeed = 0
+    t.WaterReflectance = 0
+    t.WaterTransparency = 0
+    l.GlobalShadows = false
+    l.FogEnd = 9e9
+    l.Brightness = 0
+    settings().Rendering.QualityLevel = "Level01"
+    for i, v in pairs(g:GetDescendants()) do
+        if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then 
+            v.Material = "Plastic"
+            v.Reflectance = 0
+        elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+            v.Transparency = 1
+        elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+            v.Lifetime = NumberRange.new(0)
+        elseif v:IsA("Explosion") then
+            v.BlastPressure = 1
+            v.BlastRadius = 1
+        elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+            v.Enabled = false
+        elseif v:IsA("MeshPart") then
+            v.Material = "Plastic"
+            v.Reflectance = 0
+            v.TextureID = 10385902758728957
+        end
+    end
+    for i, e in pairs(l:GetChildren()) do
+        if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+            e.Enabled = false
+        end
+    end
+end
+
+Fly = false
+	 function activatefly()
+	   local mouse=game.Players.LocalPlayer:GetMouse''
+	   localplayer=game.Players.LocalPlayer
+	   game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+	   local torso = game.Players.LocalPlayer.Character.HumanoidRootPart
+	   local speedSET=25
+	   local keys={a=false,d=false,w=false,s=false}
+	   local e1
+	   local e2
+	   local function start()
+		  local pos = Instance.new("BodyPosition",torso)
+		  local gyro = Instance.new("BodyGyro",torso)
+		  pos.Name="EPIXPOS"
+		  pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+		  pos.position = torso.Position
+		  gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		  gyro.cframe = torso.CFrame
+		  repeat
+			wait()
+			localplayer.Character.Humanoid.PlatformStand=true
+			local new=gyro.cframe - gyro.cframe.p + pos.position
+			if not keys.w and not keys.s and not keys.a and not keys.d then
+			  speed=1
+			end
+			if keys.w then
+			  new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+			  speed=speed+speedSET
+			end
+			if keys.s then
+			  new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+			  speed=speed+speedSET
+			end
+			if keys.d then
+			  new = new * CFrame.new(speed,0,0)
+			  speed=speed+speedSET
+			end
+			if keys.a then
+			  new = new * CFrame.new(-speed,0,0)
+			  speed=speed+speedSET
+			end
+			if speed>speedSET then
+			  speed=speedSET
+			end
+			pos.position=new.p
+			if keys.w then
+			  gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*15),0,0)
+			elseif keys.s then
+			  gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*15),0,0)
+			else
+			  gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+			end
+		  until not Fly
+		  if gyro then 
+			gyro:Destroy() 
+		  end
+		  if pos then 
+			pos:Destroy() 
+		  end
+		  flying=false
+		  localplayer.Character.Humanoid.PlatformStand=false
+		  speed=0
+	   end
+	   e1=mouse.KeyDown:connect(function(key)
+		  if not torso or not torso.Parent then 
+			flying=false e1:disconnect() e2:disconnect() return 
+		  end
+		  if key=="w" then
+			keys.w=true
+		  elseif key=="s" then
+			keys.s=true
+		  elseif key=="a" then
+			keys.a=true
+		  elseif key=="d" then
+			keys.d=true
+		  end
+	   end)
+	   e2=mouse.KeyUp:connect(function(key)
+		  if key=="w" then
+			keys.w=false
+		  elseif key=="s" then
+			keys.s=false
+		  elseif key=="a" then
+			keys.a=false
+		  elseif key=="d" then
+			keys.d=false
+		  end
+	   end)
+	   start()
+	 end
