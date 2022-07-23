@@ -4069,3 +4069,6 @@ local IMGNAME = Instance.new("ImageLabel")
 		end
 	return top
 	end
+
+
+local Window = create.win()
